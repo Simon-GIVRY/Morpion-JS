@@ -4,22 +4,16 @@ const elBody = document.querySelector("body")
 const elButtonReset = document.querySelector(".reset")
 
 let clicks = 0
-
 let turn = 0;
-
-let score = []
 
 let p1Score = 0 
 let p2Score = 0 
-
-
 
 //score Display
 let scoreDisplay = document.createElement('p')
 scoreDisplay.innerHTML = `<span class="p1">${p1Score}</span> | <span class="p2">${p2Score}</span>`
 
 elHeader.append(scoreDisplay)
-
 
 //player turn
 for (const cell of elCells) {
@@ -39,8 +33,6 @@ for (const cell of elCells) {
 
         wins()
         scoreDisplay.innerHTML = `<span class="p1">${p1Score}</span> | <span class="p2">${p2Score}</span>`
-
-        
     })
 }
 
@@ -48,15 +40,11 @@ elButtonReset.addEventListener("click", () => {
     reset()
 })
 
-
-
-
 let voile = document.createElement("div")
 voile.classList.add("voile")
 
 let modale = document.createElement('div')
 modale.classList.add("modale")
-
 
 voile.append(modale)
 
@@ -67,18 +55,14 @@ function gameOver (joueur) {
         <p>${joueur}</p>
         <button class="restart">Recommencer</button>
     `
-
     elBody.append(voile)
     
     let restartButton = document.querySelector(".restart")
-    
     restartButton.addEventListener("click", ()=> {
         reset()
         voile.remove()
     })
 }
-
-
 
 function reset () {
     for (const cell of elCells) {
@@ -88,13 +72,11 @@ function reset () {
     }
 }
 
-
 function wins () {
-    //p1 wins
-    //horizontal
-
     let winSentence = ""
 
+    //p1 wins
+    //horizontal
     if (elCells[0].innerText == 'X' && elCells[1].innerText == 'X' && elCells[2].innerText == 'X' ) {
         p1Score++
         winSentence = ("Le joueur 1 a gagné")
@@ -107,7 +89,6 @@ function wins () {
         p1Score++
         winSentence = ("Le joueur 1 a gagné")
     }
-
 
     //vertical
     if (elCells[0].innerText == 'X' && elCells[3].innerText == 'X' && elCells[6].innerText == 'X' ) {
@@ -148,7 +129,6 @@ function wins () {
         winSentence = ("Le joueur 2 a gagné")
     }
 
-
     //vertical
     if (elCells[0].innerText == 'O' && elCells[3].innerText == 'O' && elCells[6].innerText == 'O' ) {
         p2Score++
@@ -175,7 +155,6 @@ function wins () {
 
     //Tie
     if (turn >8) {
-        console.log('aaa');
         gameOver("C'est un match Nul!!")
         turn = 0;
         
