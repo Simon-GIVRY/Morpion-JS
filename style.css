@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+body{
+    background-color: rgb(66, 116, 66);
+    color: white;
+    font-family: 'Roboto';
+}
+
+header{
+    text-align: center;
+}
+
+table{
+    border: 4px solid black;
+    margin: 0 auto;
+    background-color: black;
+    border-radius: 10px;
+    color: black;
+}
+
+tr{
+    border: 1px solid black;
+    background-color: white;
+    
+
+}
+
+td{
+    border: 1px solid black;
+    padding: 3rem;
+}
+
+td:hover{
+    background-color: rgb(158, 158, 158);
+}
+
+.voile{
+    background-color: rgba(0, 0, 0,0.6);
+    color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modale{
+    padding: 1rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    align-items: center;
+}
+
+span.p1{
+    color: blue;
+}
+
+td.cellP1{
+    background-color: rgb(160, 160, 255);
+    color: blue;
+}
+
+span.p2 {
+    color: red;
+}
+
+td.cellP2{
+    background-color: rgb(255, 167, 167);
+    color: red;
+}
+
+footer {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+footer button, .restart{
+    border: none;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+footer button:hover, .restart{
+    background-color: rgb(197, 197, 197);
+
+}
+
+footer button:active, .restart{
+    background-color: rgb(143, 143, 143);
+
+
+}
